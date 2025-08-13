@@ -1,12 +1,12 @@
 body {
-    background-image: url('images/stars.gif');
+    background-image: url('hell_images/stars.gif');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
 }
 
 body {
-  cursor: url('images/planet.gif'), auto;
+  cursor: url('hell_images/planet.gif'), auto;
 }
 
 /* Style the header */
