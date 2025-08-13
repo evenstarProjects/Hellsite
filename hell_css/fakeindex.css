@@ -1,0 +1,57 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    margin: 50px;
+    padding: 50px;
+}
+
+main, footer {
+    padding: 2rem;
+}
+
+.goBack {
+    color:blue;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+}
+
+.help {
+    font-size: 1.2rem;
+}
+
+footer {
+    padding-top: 0;
+}
+
+/* GO BACK BUTTON */
+
+.tooltip {
+    color:blue;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:active .tooltiptext {
+  visibility: visible;
+}
