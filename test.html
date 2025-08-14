@@ -13,7 +13,9 @@
 <p>Resize the browser window to see the responsive effect.</p>
 
 <header>
+  <a href="quiz.html">
   <img class="disappear"src="hell_images/welcome.gif" alt="welcome"/>
+  </a>
 </header>
 
 <section>
@@ -55,15 +57,104 @@
                              a million students? Crazy, right? It’s home to,
                               you know, some 'leading' academic institutions 
                               like Imperial College and UCL, but like,
-                               who’s counting rankings? Just kinda awkwardly impressive, I guess?   </p>
+                               who’s counting rankings? Just kinda awkwardly impressive, I guess?
+                              Oh wow, so like Manchester is this city thing, right? Super famous,
+                               in Greater Manchester, England or whatever. So, like, there were, like, 
+                               568,996 people living there in 2022, which is kinda a lot! It's like the
+                                third biggest area in the UK—crazy! It’s near some plains and hills, 
+                                and there's that other city Salford just chilling next to it. You’ve
+                                 got areas like Trafford and Stockport, too, if you wanna get super specific. 
+                                The whole history vibe started with some Roman fort thing, Mamucium, yeah, back in like
+                                 AD 79—a long time ago! So, during the Middle Ages, it was just a sleepy township, but then,
+                                  boom! 19th century hits and it grew like really fast. Can you believe it became the first industrial city ever? 
+                                  OMG, just imagine the whole textile thing happening back then! In the 20th century,
+                                   they snatched some bits from Lancashire, including Wythenshawe, which is a cool name, right?
+                                    They officially became a city in 1853. Fast forward, the Ship Canal went live in 1894,
+                                     connecting them to the Irish Sea—like, 36 miles away or something. 
+                                But then, post-World War II, it got a bit sad with job losses and all. 
+                                The IRA bombing in '96 kinda shook things up, leading to some, like, major investment and renewal.
+                                 And they even hosted the Commonwealth Games in 2002! 
+                                Manchester’s got this rad vibe—with cool architecture and music, 
+                                and, um, they’ve got the oldest railway station thingy for inter-city travel. 
+                                Plus, University of Manchester is there. How neat is that? Like, wow!
+                              Sooo, like, London, right? It's, uh, this super big city and, um,
+         totally the capital of England and the UK, with, like,
+          nearly 9 million people wandering around in 2023?
+           Uh, its whole area is, like, the biggest in Western Europe,
+            with, like, 15.1 million?! London kinda sits awkwardly
+             on the River Thames, with this, like, gross 50-mile stretch 
+             all the way to the North Sea, and, yeah, it's been a place
+              where people hung out for, like, 2,000 years or something.
+               Wow. The City of London’s this ancient bit the Romans
+                called Londinium, and it’s like, still kinda medieval,
+                 if you squint at it? So, uh, to the west is Westminster,
+                  which has been dealing with government stuff for ages,
+                   like, since forever. London had this super growth spurt
+                    in the 19th century, becoming, like, the biggest city
+                     in the world back then, which is, um, kinda cool,
+                      I guess? After that, 'London' became this weird term
+                       for the whole area and, like, now it's Greater London
+                        with all these local authorities—33, I think?
+                         Ugh, who even counts that? Anyway, London’s,
+                          like, a big deal globally, influencing stuff 
+                          like art and finance and all that jazz.
+                           It’s, um, also the most economically powerful city
+                            in Europe, so there's that. 
+                            Plus, it’s got, like, more universities than
+                             you can shake a stick at—over 50—and about half 
+                             a million students? Crazy, right? It’s home to,
+                              you know, some 'leading' academic institutions 
+                              like Imperial College and UCL, but like,
+                               who’s counting rankings? Just kinda awkwardly impressive, I guess?
+                              Oh wow, so like Manchester is this city thing, right? Super famous,
+                               in Greater Manchester, England or whatever. So, like, there were, like, 
+                               568,996 people living there in 2022, which is kinda a lot! It's like the
+                                third biggest area in the UK—crazy! It’s near some plains and hills, 
+                                and there's that other city Salford just chilling next to it. You’ve
+                                 got areas like Trafford and Stockport, too, if you wanna get super specific. 
+                                The whole history vibe started with some Roman fort thing, Mamucium, yeah, back in like
+                                 AD 79—a long time ago! So, during the Middle Ages, it was just a sleepy township, but then,
+                                  boom! 19th century hits and it grew like really fast. Can you believe it became the first industrial city ever? 
+                                  OMG, just imagine the whole textile thing happening back then! In the 20th century,
+                                   they snatched some bits from Lancashire, including Wythenshawe, which is a cool name, right?
+                                    They officially became a city in 1853. Fast forward, the Ship Canal went live in 1894,
+                                     connecting them to the Irish Sea—like, 36 miles away or something. 
+                                But then, post-World War II, it got a bit sad with job losses and all. 
+                                The IRA bombing in '96 kinda shook things up, leading to some, like, major investment and renewal.
+                                 And they even hosted the Commonwealth Games in 2002! 
+                                Manchester’s got this rad vibe—with cool architecture and music, 
+                                and, um, they’ve got the oldest railway station thingy for inter-city travel. 
+                                Plus, University of Manchester is there. How neat is that? Like, wow!
+                              
+                              
+                              
+                              
+                              </p>
     
   </article>
 </section>
+<a href="quiz.html">
+  <button id="runaway">Catch Me!</button>
+ </a>
+
+<script>
+const btn = document.getElementById('runaway');
+
+btn.addEventListener('mouseover', () => {
+  const x = Math.floor(Math.random() * (window.innerWidth - btn.clientWidth));
+  const y = Math.floor(Math.random() * (window.innerHeight - btn.clientHeight));
+  btn.style.left = `${x}px`;
+  btn.style.top = `${y}px`;
+});
+</script>
+
 
 <footer>
-    <audio controls>
+    <audio autoplay controls>
     <source src="/hell_music/thirteen-and-thriving-a-13th-birthday-song-for-a-girl-385598.mp3" type="audio/mpeg">
    </audio>
+
+
   <p>Footer</p>
 </footer>
 
