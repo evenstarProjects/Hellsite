@@ -14,7 +14,7 @@ header {
   padding: 30px;
   text-align: center;
   font-size: 35px;
-  color: white,
+  color: white;
 }
 
 /* Container for flexboxes */
@@ -51,6 +51,15 @@ footer {
   padding: 10px;
   text-align: center;
   color: #ffffff;
+}
+
+.disappear {
+    transition: opacity 0.3s ease;
+}
+
+.disappear:hover {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
