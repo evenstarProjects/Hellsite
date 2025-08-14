@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Randomised Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+  }
+  .quiz-container {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .question {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  button {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #ccc;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <div id="quiz">
+    <div class="question" id="question"></div>
+    <div id="answers"></div>
+  </div>
+  <div id="result" class="hidden"></div>
+</div>
+
+<script>
+const quizData = [
+  {
+    question: "Who is the best Lord of the Rings character?",
+    answers: ["Frodo", "Gandalf", "Legolas", "Wormtongue"],
+    correct: "Wormtongue"
+  },
+  {
+    question: "What is the correct name for the last meal of the day?",
+    answers: ["Dinner", "Tea", "Supper", "Evening meal"],
+    correct: "Tea"
+  },
+  {
+    question: "What is the correct name for a bread roll?",
+    answers: ["Bap", "Barm", "Butty", "Cob"],
+    correct: "Barm"
+  },
+    {
+    question: "Where is the North of England?",
+    answers: ["Above Birmingham", "Above Nottingham", "Above Sheffield", "Milton Keynes"],
+    correct: "Above Nottingham"
+  },
+  {
+    question: "What is the UK's best coffee chain?",
+    answers: ["Costa", "Starbucks", "Cafe Nero", "Coffee House"],
+    correct: "Cafe Nero"
+  },
+  {
+    question: "Was the dress _ ?",
+    answers: ["White and Gold", "Blue and Black"],
+    correct: "Blue and Black"
+  },
+    {
+    question: "Which did people hear?",
+    answers: ["Yanny", "Laurel", "Both", "Neither"],
+    correct: "Both"
+  },
+  {
+    question: "Look at all those chickens! What was actually in the video?",
+    answers: ["Geese", "Ducks", "Pigeons", "Real Chickens"],
+    correct: "Geese"
+  },
+  {
+    question: "Which famous actor played the titular role in the popular Harry Potter film franchise?",
+    answers: ["Daniel Radcliffe", "Elijah Wood"],
+    correct: "Elijah Wood"
+  }
+
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function shuffleArray(array) {
+  return array
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+function loadQuestion() {
+  const q = quizData[currentQuestion];
+  document.getElementById("question").textContent = q.question;
+
+  // Shuffle answers
+  const shuffledAnswers = shuffleArray(q.answers);
+
+  const answersDiv = document.getElementById("answers");
+  answersDiv.innerHTML = "";
+  shuffledAnswers.forEach(answer => {
+    const btn = document.createElement("button");
+    btn.textContent = answer;
+    btn.onclick = () => checkAnswer(answer);
+    answersDiv.appendChild(btn);
+  });
+}
+
+function checkAnswer(selectedAnswer) {
+  if (selectedAnswer === quizData[currentQuestion].correct) {
+    score++;
+  }
+  currentQuestion++;
+  if (currentQuestion < quizData.length) {
+    loadQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById("quiz").classList.add("hidden");
+  const resultDiv = document.getElementById("result");
+  resultDiv.textContent = `You scored ${score} out of ${quizData.length}!`;
+  resultDiv.classList.remove("hidden");
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>
