@@ -55,3 +55,11 @@ footer {
 .tooltip:active .tooltiptext {
   visibility: visible;
 }
+
+/* HI BUTTON */
+
+.hi {
+    text-decoration:dotted;
+    color:greenyellow;
+    background-color: yellow;
+}
